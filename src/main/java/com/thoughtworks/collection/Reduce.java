@@ -72,7 +72,7 @@ public class Reduce {
         if (arrayList.size() % 2 == 0){
             // 坑：包装类之间不能直接转换 java.lang.ClassCastException: java.lang.Integer cannot be cast to java.lang.Double
             double small = Double.parseDouble(singleLinkList.getNode(index).toString());
-            double big = Double.parseDouble(singleLinkList.getNode(index + 1).toString());
+            double big = Double.parseDouble(singleLinkList.getNode(index - 1).toString());
 //            double big = (double)singleLink.getNode(index + 1);
             return (small + big) / 2;
         }else {
